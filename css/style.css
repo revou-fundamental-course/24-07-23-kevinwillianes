@@ -1,0 +1,114 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #42855B;
+    margin: 0;
+    padding: 0;;
+}
+.logo{
+    width: 50px;
+}
+.header, .contact-us, .container, #contact{
+    text-align: center;
+}
+.button {
+    background-color: #29323d; /* Green */
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .images{
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+.container{
+    background-color: #edf0f4;
+    padding: 5%;
+}
+#home{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-form{
+    background-color: #b0b1b0;
+}
+.nav-btn{
+    display: flex;
+    padding: 10px;
+    border-color: #000000;
+    background-color: #42855B;
+    margin: 10px;
+    color: white;
+}
+body{
+    margin: 0;
+}
+a:hover{
+    background-color: #36d872;
+}
+.container-pckg{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .country{
+    width: 33%;
+    height: 200px;
+  }
+  .container-pckg{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  input {
+    height: 50px;
+    margin: 10px 0 0 0;
+    border:2px solid #D8D9DA;
+    border-radius: 5px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
