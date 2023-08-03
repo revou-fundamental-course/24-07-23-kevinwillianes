@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-  <title>moqups</title>
+    <title>RevoU</title>
 </head>
 <body>
-    <!-- Start Header -->
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="#">
-                    <img src="assets/logo.jpg" style="width: 100%;" alt="logoTravel">
-                </a>
+        <!-- Header Section -->
+        <section class="navigation">
+            <div class="logo" id="home">
+                <a href="#home"><img src="assets/logo.jpg" style="width:100%"></a>
             </div>
-            <div class="nav-btn">
-                <a href="#home">Home</a>
-                <a href="#package">Our Package</a>
-                <a href="#contact">Call Us</a>
-                
-            </div>
-        </div>
-        <div class="header">
+            <nav class="btn-group">
+                <a href="#home"><button class="button">Home</button></a>
+                <a href="#middle"><button class="button">Our Package</button></a>
+                <a href="#bottom"><button class="button">Call Us</button></a>
+            </nav>
+        </section>
+        <section id="headerTitle">
             <h1>Your Trusted Travel Agent's</h1>
-            <p>Your happiness is our appiness</p>
-        </div>
+            <h3 id="subtitle">Your happiness is our happiness</h3>
+        </section>
     </header>
-    <!-- End Header -->
-    <!-- Start Main -->
+    <!-- Main Section -->
     <main>
-        <div id="home">
-            <div class="images">
+        <section class="container-middle">
+            <section id="images">
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                       <div class="numbertext">1 / 2</div>
-                      <img width="100%" src="assets/peponi1.jpg">
-                      <div class="text">Caption Text</div>
+                      <img class="imageSlide" width="1000" src="assets/gunung.jpg">
                     </div>
                     <div class="mySlides fade">
                       <div class="numbertext">2 / 2</div>
-                      <img width="100%" src="assets/peponi2.jpg" >
-                      <div class="text">Caption Text</div>
+                      <img class="imageSlide" width="1000" src="assets/pantai.jpg">
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">❮</a>
                     <a class="next" onclick="plusSlides(1)">❯</a>
@@ -49,111 +45,116 @@
                     <span class="dot" onclick="currentSlide(1)"></span> 
                     <span class="dot" onclick="currentSlide(2)"></span> 
                 </div>
-            </div>
-            <div class="contact-form">
-                <div class="contact-us">
-                    <h3>Contact Us</h3>
-                    <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p>
+            </section>
+            <!-- Form section -->
+            <section class="contact">
+                <div class="title_contact_us">
+                    <div class="title_contact_us_first">Contact Us</div>
+                    <div class="title_contact_us_second">Sales akan menghubungi anda 1x24 jam setelah data kami terima</div>
                 </div>
-                <div class="form">
-                    <form action="">
-                    <label for="name">Your Name:</label>
-                    <br>
-                    <input type="text" placeholder="First and last name">
-                    <br>
-                    <label for="email">Email Address:</label>
-                    <br>
-                    <input type="text" placeholder="example@email.com">
-                    <br>
-                    <label for="tour">What are you interested in?</label>
-                    <br>
-                    <select name="tour" id="tour">
-                      <option disabled selected value>Select option</option>
-                      <option value="solo">backpacker</option>
-                      <option value="group">Group Tour</option>
-                      <option value="study">Study Tour</option>
-                    </select>
-                    <br>
-                    <input type="button" value="SEND">
-                    </form>
-                </div>
+                <form name="form_contact_us" onsubmit="return validateForm()">
+                    <div class="form_contact_us_block">
+                        <label for="fname">Your name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="First and last name">
+                    </div>
+                    <div class="form_contact_us_block">
+                        <label for="fname">Email Address:</label>
+                        <input type="text" id="email" name="email" placeholder="example@email.com">
+                    </div>
+                    <div class="form_contact_us_block">
+                        <label for="interested">What are you interested in?</label>
+                        <select name="interested" id="interested">
+                            <option disabled selected value>Select option</option>
+                            <option value="japan">Japan</option>
+                            <option value="korea">Korea</option>
+                            <option value="singapore">Singapore</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="form_contact_us_button"> SEND </button>
+                    </div>
+                </form>
+            </section>
+        </section>
+        <!-- Testimoni section -->
+        <section id="testimoni">
+            <div class="titleTesti">What They Say</div>
+            <div>
+                <hr>
+                <i>
+                    <p>"Liburan ke Lombok menggunakan jasa Peponi Travel dijamin memuaskan.
+                    <br>Selain harga yang murah, service nya juga oke punya."</p>
+                </i>
             </div>
-        </div>
-        <div class="more-info">
-            <p>woi</p>
-        </div>
-        <div id="package">
-            <div class="container">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="assets/profil.jpeg" style="width:100%" class="fitCover">
+                </div>
+                <h4>
+                    <span>
+                        <b>Bobby</b>
+                    </span>
+                    <br>
+                    Karyawan Swasta, 28
+                </h4>
+            </div>
+        </section>
+        <!-- Middle section -->
+        <section id="package ">
+            <div class="container" id="middle">
                 <h2>Our Package</h2>
             </div>
             <div class="container-pckg">
                 <div class="country" id="korea">
                     <h3>South Korea</h3>
-                    <p>Lorem ipsum </p>
+                    <p>Sebuah petualangan yang akan mengajak kamu mendalami Seoul dan Nami Island dalam keindahan winter yang romantis
+
+                        Perjalanan musim dingin bersama Peponi di Korea Selatan akan memberikan kamu kesempatan untuk menjelajahi destinasi terbaik.</p>
                 </div>
                 <div class="country" id="japan">
                     <h3>Japan</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus, eum sunt tempora fugiat harum atque exercitationem, inventore itaque voluptatem magnam quisquam, dicta adipisci deleniti quia omnis voluptas enim commodi.</p>
+                    <p>4 Kota, 25 beragam destinasi/aktivitas unik. Sebuah perjalanan mengesankan menjelajahi Jepang mulai dari ibukota modern, alam indah di kaki gunung, kota tradisional & budaya, hingga petualangan kuliner.</p>
                 </div>
                 <div class="country" id="swiss">
                     <h3>Swiss</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus, eum sunt tempora fugiat harum atque exercitationem, inventore itaque voluptatem magnam quisquam, dicta adipisci deleniti quia omnis voluptas enim commodi.</p>
+                    <p>Sebuah petualangan mendalami Swiss mulai dari kota tua nan cantik hingga tinggal di desa di tengah pegunungan alpen yang spektakuler.</p>
                 </div>
                 <div class="country" id="new-zealand">
                     <h3>New Zealand</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus, eum sunt tempora fugiat harum atque exercitationem, inventore itaque voluptatem magnam quisquam, dicta adipisci deleniti quia omnis voluptas enim commodi.</p>
+                    <p>New Zealand saat musim semi merupakan saat dimana negeri kiwi menampilkan keindahan yang cantik dengan perpaduan biru danau glaicer dengan warna pink, ungu, putih dari bunga lupin. Ini merupakan sebuah destinasi impian bagi setiap orang dan dipastikan akan menciptakan liburan paling sempurna dalam hidup kamu.</p>
                 </div>
                 <div class="country" id="australia">
                     <h3>Australia</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus, eum sunt tempora fugiat harum atque exercitationem, inventore itaque voluptatem magnam quisquam, dicta adipisci deleniti quia omnis voluptas enim commodi.</p>
+                    <p>Jelajahi Australia layaknya seperti orang lokal, mulai dari bersantai di pelataran Sydney Opera House, berjalan menyusuri pesisir kota pelabuhan menapak tilas sejarah Aborigin, hingga bersantai di pantai-pantai terbaik kelas dunia yang ikonik. Oh ya, kamu juga dapat bertemu dengan satwa-satwa unik khas Australia. </p>
                 </div>
                 <div class="country" id="uk">
                     <h3>United Kingdom</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus, eum sunt tempora fugiat harum atque exercitationem, inventore itaque voluptatem magnam quisquam, dicta adipisci deleniti quia omnis voluptas enim commodi.</p>
+                    <p>Perjalanan ini dirangkai khusus oleh Peponi untuk mengajak kamu menjelajahi United Kingdom (UK) dengan fokus utama di kota London dan kawasan sekitarnya seperti Oxford dan Greenwich, dengan waktu yang lebih lama dan mendalam, mengenal setiap sudut kota yang penuh dengan sejarah melalui > 35 aktivitas/destinasi menakjubkan.</p>
                 </div>
             </div>
-        </div>
+        </section>
         <hr>
-        <div id="contact">
-            <h2>#AKUBISALIBURAN</h2>
-            <p>pengalaman traveling yang mungkin belum pernah kamu rasakan</p>
-            <button class="button">CALL TO ACTION</button>            
-        </div>
-    </main>
-    <!-- End Main -->
-    <!-- Start Footer -->
-    <footer>
+        <!-- Closing section -->
 
+    </main>
+    <div class="closing" id="bottom">
+        <h2 class="closing_title">#AKUBISALIBURAN</h2>
+        <p>pengalaman traveling yang mungkin belum pernah kamu rasakan. <br> Berbeda dari yang lain, Peponi merangkai perjalanan dan petualangan ke destinasi favorit kamu dengan cara yang unik seperti orang lokal. Solo traveler, berpetualang bersama teman baik, ataupun keluarga</p>
+        <a href="#home"><button class="callbutton">CALL TO ACTION</button></a>          
+    </div>
+    <footer>
+        <section class="info">
+            <p>Tidak bisa mengunjungi kami langsung?<br>layanan online kami selalu siap sedia melayani.</p>
+            <b><p>on-line service</p></b>
+            <p>Senin - Jumat | 09.00 - 19.00 WIB<br>Sabtu | 09.00 - 17.00 WIB</p>
+        </section>
+        <section class="footer">
+            <h3 class="footer-title">Follow Peponi di Sosial Media</h3>
+            <p>Ketahui berbagai informasi, inspirasi, dan cerita perjalanan dari Peponi <br> dengan mengikuti akun resmi media sosial kami.</p>
+            <img class="sosmed-item" src="assets/sosmed.png" width="150px">    
+        </section>
+        
     </footer>
-    <!-- End Footer -->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
-        
-</body>
+</body>   
 </html>
+<script type="text/javascript" src="js/script.js"></script>
